@@ -1,8 +1,6 @@
 version: 2.0
 
 shared: &shared
-    environment:
-        DEBIAN_FRONTEND: noninteractive
     steps:
 
         - checkout
@@ -21,7 +19,7 @@ shared: &shared
 
         - run:
             name: Build project
-            command: mint-build -i
+            command: DEBIAN_FRONTEND=noninteractive mint-build -i
 
         - run:
             name: Prepare packages
