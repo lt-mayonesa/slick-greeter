@@ -611,7 +611,7 @@ public class SlickGreeter
             output = output.strip();
             if (output == "2") {
                 debug ("Activating HiDPI (2x scale ratio)");
-                GLib.Environment.set_variable ("GDK_SCALE", "2", true);
+                GLib.Environment.set_variable ("GDK_SCALE", "1.5", true);
             }
         }
         catch (Error e){
@@ -701,7 +701,7 @@ public class SlickGreeter
             check_hidpi ();
         }
         else if (hidpi == "on") {
-            GLib.Environment.set_variable ("GDK_SCALE", "2", true);
+            GLib.Environment.set_variable ("GDK_SCALE", "1.5", true);
         }
 
         /* Set the keyboard layout */

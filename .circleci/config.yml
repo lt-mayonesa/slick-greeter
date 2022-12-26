@@ -1,7 +1,8 @@
 version: 2.0
 
 shared: &shared
-
+    environment:
+        DEBIAN_FRONTEND: noninteractive
     steps:
 
         - checkout
